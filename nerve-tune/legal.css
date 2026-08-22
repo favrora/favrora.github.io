@@ -1,0 +1,47 @@
+:root {
+  color-scheme: light dark;
+  --ink: #071226;
+  --muted: #536179;
+  --blue: #1769ff;
+  --cyan: #77d8ff;
+  --line: rgba(23, 105, 255, 0.16);
+  --paper: rgba(255, 255, 255, 0.86);
+  --background: #f4f7ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 14% 0%, rgba(119, 216, 255, 0.38), transparent 31rem),
+    radial-gradient(circle at 92% 16%, rgba(23, 105, 255, 0.18), transparent 28rem),
+    linear-gradient(180deg, #f8faff, var(--background));
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+}
+
+header, main, footer { width: min(780px, calc(100% - 36px)); margin-inline: auto; }
+header { padding: 52px 0 20px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); font-size: 20px; font-weight: 780; letter-spacing: -.025em; text-decoration: none; }
+.mark { display: grid; width: 40px; height: 40px; place-items: center; border-radius: 13px; background: #071226; color: var(--cyan); box-shadow: 0 12px 30px rgba(23, 105, 255, .24); }
+
+main { padding: 38px clamp(22px, 5vw, 58px) 58px; border: 1px solid rgba(255,255,255,.9); border-radius: 32px; background: var(--paper); box-shadow: 0 26px 80px rgba(12, 43, 100, .11); backdrop-filter: blur(20px); }
+h1, h2 { color: var(--ink); letter-spacing: -.035em; }
+h1 { margin: 0 0 10px; font-size: clamp(38px, 8vw, 62px); line-height: 1.02; }
+h2 { margin: 2.25em 0 .55em; font-size: 25px; line-height: 1.2; }
+p, li { color: var(--muted); }
+a { color: var(--blue); }
+.lede { max-width: 660px; font-size: 20px; }
+.meta { color: var(--blue); font-size: 14px; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button { display: inline-block; padding: 12px 18px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink); font-weight: 720; text-decoration: none; }
+footer { padding: 30px 0 54px; color: var(--muted); font-size: 14px; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #f5f8ff; --muted: #b8c4d9; --paper: rgba(10, 18, 35, .9); --background: #050a14; }
+  body { background: radial-gradient(circle at 14% 0%, rgba(23,105,255,.26), transparent 30rem), linear-gradient(180deg, #081124, #050a14); }
+  main { border-color: rgba(255,255,255,.08); }
+  .mark { background: #f5f8ff; color: #1769ff; }
+  .button { background: rgba(255,255,255,.06); }
+}
