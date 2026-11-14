@@ -52,10 +52,11 @@
       <h2>Online meal estimates</h2>
       <p>
         When you request an online estimate, the CaloriePad service receives the meal photo you
-        submit and the app language. Google Gemini processes this content to identify foods and
-        estimate portions. Google describes how it handles paid API requests, including limited
-        logging for safety and legal obligations, in the
-        <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>.
+        submit, any food description you provide and the app language. Google Cloud Vertex AI
+        (Gemini) processes this content through its European endpoint to identify foods and
+        estimate portions. Google describes its training restrictions, temporary caching and
+        safety logging in the
+        <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention">Vertex AI data retention documentation</a>.
       </p>
       <p>
         A food name inferred from your photo may be used to search
