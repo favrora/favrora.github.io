@@ -16,12 +16,12 @@
       </a>
     </header>
     <main>
-      <p class="meta">November 13, 2026</p>
+      <p class="meta">November 14, 2026</p>
       <h1>Privacy Policy</h1>
       <p class="lede">
-        CaloriePad has no sign-in or cloud diary. Your saved meals, nutrition goals, and templates
-        are stored on your device. Online meal estimates send the information needed to complete the
-        request.
+        The guest diary stays on your device. If you choose to sign in when account access is
+        available, CaloriePad backs up your account diary to its dedicated service. Online meal
+        estimates send the information needed to complete the request.
       </p>
 
       <h2>Who operates CaloriePad</h2>
@@ -29,12 +29,24 @@
 
       <h2>Diary and device permissions</h2>
       <p>
-        We store your diary, goals, templates, preferences, and any saved LabelFit history in the
-        app's storage on your device. If you estimate your daily goal, your age, height, weight,
-        activity level, and formula reference stay on your device. Manual entries and saved diary
-        records are available offline. CaloriePad uses the camera to take meal photos, and accesses
-        photos you select for analysis. If you skip these permissions, you can still log food
-        manually. Photos that you choose from your library remain in your library.
+        The app stores guest and account diaries separately on your device. Account sync stores
+        meals, templates, preferences, and nutrition goal inputs in a separate database. Saved
+        LabelFit history and in-progress capture drafts stay on your device. An unfinished photo is
+        kept in app storage so you can resume the draft. Saving or discarding a draft removes its
+        temporary photo. If you import your guest diary, a copy of those entries joins your account.
+        Manual entries and saved diary records are available offline. CaloriePad uses the camera
+        to take meal photos and accesses photos you select for analysis. If you skip these
+        permissions, you can still log food manually. Photos you select remain in your library.
+      </p>
+
+      <h2>Account sign-in and deletion</h2>
+      <p>
+        For an optional account, Firebase Authentication processes your email address, provider
+        identity and security information when you sign in with Apple, Google or email. Your
+        account identifier separates your diary from other accounts. You can request account
+        deletion in Profile → Account after confirming your sign-in. Deletion removes your synced
+        diary and account. It leaves your guest diary and store subscription available for separate
+        management. The deletion page is linked from Account when sign-in is enabled.
       </p>
 
       <h2>Online meal estimates</h2>
@@ -66,25 +78,33 @@
           full payment card details.
         </li>
         <li>
-          <a href="https://firebase.google.com/support/privacy">Google Analytics for Firebase</a>
-          processes pseudonymous app and device data and usage events, such as an estimate finishing
-          or a purchase failing. We use these signals to understand usage and improve reliability.
-          Our analytics events omit submitted photos, food descriptions, nutrition values, and diary
-          records.
+          With your permission, <a href="https://amplitude.com/privacy">Amplitude</a> receives a
+          randomly generated analytics identifier, app version, build and platform, and limited usage
+          events for onboarding, saving meals, analysis performance and subscriptions. Events do
+          not include photos, diary text, nutrition values, account identifiers, or address fields.
+          The app does not record your screen. You can turn off usage analytics in Profile at any
+          time. This stops subsequent collection and clears the app's analytics identifier.
+          The app does not provide your IP address as an event property for location enrichment.
+          The network connection to Amplitude still exposes its originating IP address.
         </li>
       </ul>
 
       <h2>Retention and deletion</h2>
       <p>
-        The CaloriePad service does not write original photos or food descriptions to its database.
-        To recover from a dropped connection, it stores an encrypted copy of the estimate that can
-        be retrieved by retrying the same request for up to 15 minutes. That record is scheduled for
-        database deletion after 24 hours. Deletion runs asynchronously.
+        The CaloriePad estimate service does not write original photos or submitted descriptions
+        to its request database. Food names in diary entries you choose to sync are part of your
+        account diary.
+        To recover from a dropped connection, it stores an encrypted copy of the generated
+        estimate. Retrying the same request can retrieve it for up to 15 minutes. The service
+        schedules that copy for deletion 24 hours after completion.
       </p>
       <p>
-        Hashed allowance records are scheduled for deletion 70 days after their last update. Cloud
-        hosting may retain technical logs for service operations and security. These logs are
-        designed to omit request content. Providers apply their own retention practices.
+        A separate record with a hashed request identifier and completion status prevents retries
+        from counting twice against the analysis allowance. The service schedules that record for
+        deletion after 70 days and allowance records for deletion 70 days after their last update.
+        Database deletion runs asynchronously. Cloud hosting may retain technical logs for service
+        operations and security. These logs are designed to omit request content. Providers apply
+        their own retention practices.
       </p>
       <p>
         To erase the diary and saved app content on this device, open Settings from Profile and
@@ -98,9 +118,9 @@
       <p>
         CaloriePad is intended for people 18 and older. If you have questions about this policy or
         want to exercise privacy rights available where you live, email
-        <a href="mailto:webcoder.ru@gmail.com">webcoder.ru@gmail.com</a>. Because CaloriePad has no
-        account, we may need additional information to identify records associated with your
-        request. Avoid sending meal photos or medical information by email.
+        <a href="mailto:webcoder.ru@gmail.com">webcoder.ru@gmail.com</a>. If you use CaloriePad
+        without an account, we may need additional information to identify records associated
+        with your request. Avoid sending meal photos or medical information by email.
       </p>
     </main>
     <footer>
