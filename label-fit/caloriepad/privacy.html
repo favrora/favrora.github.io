@@ -79,17 +79,27 @@
         </li>
         <li>
           With your permission, <a href="https://amplitude.com/privacy">Amplitude</a> receives a
-          randomly generated analytics identifier, app version, build and platform, and limited usage
-          events for onboarding, saving meals, analysis performance and subscriptions. Events do
-          not include photos, diary text, nutrition values, account identifiers, or address fields.
-          The app does not record your screen. You can turn off usage analytics in Profile at any
-          time. This stops subsequent collection and clears the app's analytics identifier.
-          The app does not provide your IP address as an event property for location enrichment.
-          The network connection to Amplitude still exposes its originating IP address.
+          randomly generated installation identifier, app version, build, platform, and event
+          timestamps. Usage events include app opens, screen visits, onboarding, meal saves and
+          paywall actions, including the plan and result of a purchase or restore where applicable.
+          Diagnostics include the time a photo estimate takes and a limited set of error codes.
+          Events do not include photos, diary text, nutrition values, account identifiers, address
+          fields, or screen recordings. We use these events to understand usage and improve the app.
+          The app sends a placeholder IP value to prevent location enrichment from the connection
+          IP. Amplitude can still see the IP address of the network connection.
         </li>
       </ul>
 
       <h2>Retention and deletion</h2>
+      <p>
+        Usage analytics is optional. You can allow it when the app asks or in Profile.
+        Turn off <strong>Usage analytics</strong> there at any time to stop new events. If you
+        turn it back on, the app uses a new identifier. The app keeps earlier identifiers on this
+        installation so support can find events already sent. To request deletion of those events,
+        use <strong>Request analytics deletion</strong> in Profile. It opens an email with the
+        identifiers for you to send to <a href="mailto:webcoder.ru@gmail.com">support</a>.
+        If you have already removed the app or cleared its data, contact support for help.
+      </p>
       <p>
         The CaloriePad estimate service does not write original photos or submitted descriptions
         to its request database. Food names in diary entries you choose to sync are part of your
